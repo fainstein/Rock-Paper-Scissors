@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <title>Rock, Paper, Scissors | Frontend Mentor</title>
+
+</head>
+
+<body>
+
+  <div class="container-fluid">
+
+    <div class="top-section">
+      <img class="logo-img" src="images/logo.svg" alt="logo-img">
+      <div class="score-container">
+        <p>SCORE</p>
+        <h1 class="score-number">0</h1>
+      </div>
+
+    </div>
+
+
+
+    <div class="popup-container">
+      <div class="popup hide">
+        <div class="popup-top">
+          <h1>RULES</h1>
+          <img class="close-icon show-desktop" src="images/icon-close.svg" alt="close-icon-img">
+        </div>
+        <img class="rules-img" src="images/image-rules.svg" alt="rules-img">
+        <img class="close-icon show-mobile" src="images/icon-close.svg" alt="close-icon-img">
+      </div>
+    </div>
+
+    <div class="game-section">
+      <div id="paper" class="hand-box paper-box">
+        <div class="circle paper-fill"></div>
+        <div class="border paper-border"></div>
+      </div>
+      <div id="rock" class="hand-box rock-box">
+        <div class="circle rock-fill"></div>
+        <div class="border rock-border"></div>
+      </div>
+      <div id="scissors" class="hand-box scissors-box">
+        <div class="circle scissors-fill"></div>
+        <div class="border scissors-border"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="match-container hide">
+
+    <div class="you-picked">
+      <p class="choosing-title">YOU PICKED</p>
+      <div class="hand-box">
+        <div class="circle"></div>
+        <div class="border"></div>
+      </div>
+    </div>
+
+    <div class="winner-box hide">
+      <h1></h1>
+      <div class="play-again">
+        <p>PLAY AGAIN</p>
+      </div>
+    </div>
+
+    <div class="house-picked">
+      <p class="choosing-title">THE HOUSE PICKED</p>
+      <div class="hand-box hide">
+        <div class="circle"></div>
+        <div class="border"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="rules">
+    <p>RULES</p>
+  </div>
+
+
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://github.com/fainstein">Nicolas Fainstein</a>.
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="game.js" charset="utf-8"></script>
+</body>
+
+</html>

@@ -1,0 +1,388 @@
+body {
+  background: radial-gradient(circle, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  user-select: none;
+  padding-top: 70px;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.top-section {
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  border-color: hsl(217, 16%, 45%);
+  border-width: 2px;
+  border-style: solid;
+  padding: 1%;
+  max-width: 600px;
+}
+
+.score-container {
+  background-color: #fff;
+  border-radius: 8px;
+  width: 130px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.score-container p {
+  margin-bottom: 0;
+  color: hsl(229, 64%, 46%);
+  letter-spacing: 3px;
+}
+
+.score-container h1 {
+  margin: 0;
+  color: hsl(229, 25%, 31%);
+  font-size: 48px;
+}
+
+/* GAME SECTION */
+.game-section {
+  height: 180px;
+  background: url("images/bg-triangle.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+  margin: 120px auto 100px;
+}
+
+/* GENERAL STYLES */
+.circle {
+  border-radius: 100%;
+  background-color: #cdcdcd;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  z-index: 1;
+}
+
+.border {
+  width: 130px;
+  height: 130px;
+  border-radius: 100%;
+  position: fixed;
+}
+
+/* GAME BOXES STYLE */
+.top-circles {
+  width: 100%;
+}
+
+.hand-box {
+  display: flex;
+  /* establish flex container */
+  flex-direction: column;
+  /* align children vertically (column format) */
+  justify-content: center;
+  /* center children vertically */
+  align-items: center;
+  /* center column horizontally */
+  cursor: pointer;
+}
+
+.paper-box, .scissors-box {
+  position: relative;
+  bottom: 80px;
+}
+
+.rock-box {
+  position: relative;
+  top: 80px;
+}
+
+/* PAPER STYLE */
+.paper-fill {
+  background: url("images/icon-paper.svg"), radial-gradient(circle, #dcdce0, #e8eaf4);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.paper-border {
+  background: linear-gradient(180deg, hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+}
+
+/* ROCK STYLE */
+.rock-border {
+  background: linear-gradient(180deg, hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+}
+
+.rock-fill {
+  background: url("images/icon-rock.svg"), radial-gradient(circle, #dcdce0, #e8eaf4);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* SCISSORS STYLE */
+.scissors-border {
+  background: linear-gradient(180deg, hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+}
+
+.scissors-fill {
+  background: url("images/icon-scissors.svg"), radial-gradient(circle, #dcdce0, #e8eaf4);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* RULES */
+.rules {
+  cursor: pointer;
+  border-radius: 6px;
+  border-color: #fff;
+  border-width: 1px;
+  border-style: solid;
+  display: block;
+  max-width: 100px;
+  margin-left: auto;
+  color: #fff;
+  margin-right: 100px;
+}
+
+.rules:hover {
+  background-color: #fff;
+  color: hsl(237, 49%, 15%);
+  transition: .25s;
+}
+
+.rules p {
+  text-align: center;
+  margin: 10px;
+  font-size: 14px;
+}
+
+/* RULES POP UP */
+.popup-container {
+  display: flex;
+  justify-content: center;
+}
+
+.popup {
+  background-color: rgba(255, 255, 255);
+  padding: 10px 30px 10px;
+  border-radius: 10px;
+  z-index: 3;
+  position: absolute;
+  top: 250px;
+}
+
+.popup-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.popup h1 {
+  margin: 0;
+  color: hsl(229, 25%, 31%);
+}
+
+.popup .rules-img {
+  display: block;
+  padding: 20px;
+}
+
+.popup .close-icon {
+  cursor: pointer;
+  height: 23px;
+  position: relative;
+  top: 10px;
+}
+
+.popup .show-mobile {
+  display: none;
+}
+
+.hide {
+  display: none !important;
+}
+
+/* MATCH DEFINITION SECTION */
+.match-container {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  color: #fff;
+  max-width: 800px;
+  letter-spacing: 1.5px;
+  padding-top: 50px;
+  padding-bottom: 250px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.choosing-title{
+  letter-spacing: 2px;
+  font-weight: 500;
+  font-size: 25px;
+  width: 250px;
+}
+
+/* HAND CIRCLE STLYES */
+
+.match-container .hand-box {
+  top: 100px;
+}
+
+.match-container .circle {
+  width: 140px;
+  height: 140px;
+}
+
+.match-container .border {
+  width: 180px;
+  height: 180px;
+}
+
+/* WINNER BOX STYLES */
+
+.winner-box h1{
+  padding-top: 50px;
+  font-size: 42px;
+  margin-bottom: 0;
+}
+
+.winner-box .play-again{
+  cursor: pointer;
+  border-radius: 6px;
+  background-color: #fff;
+  color: hsl(237, 49%, 15%);
+  height: 40px;
+  width: 180px;
+}
+
+.winner-box .play-again:hover{
+color: hsl(349, 71%, 52%);
+}
+
+.match-container .play-again p{
+  padding-top: 11px;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+
+
+/* FOOTER */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  padding-top: 70px;
+  color: hsl(228, 45%, 44%);
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 850px) {
+  .game-section {
+    margin: 150px auto 150px;
+  }
+
+  .top-section {
+    width: 300px;
+    padding: 10px;
+  }
+
+  .top-section img {
+    width: 120px;
+    height: 75px;
+  }
+
+  .score-container {
+    width: 110px;
+    height: 75px;
+  }
+
+  .score-container p {
+    margin-top: 10px;
+  }
+
+  .score-container h1 {
+    font-size: 38px;
+    position: relative;
+    bottom: 2.5px;
+  }
+
+  .rules {
+    margin-right: auto;
+  }
+}
+
+/* MATCH SECTION */
+.match-container .hand-box {
+  position: relative;
+}
+
+@media (max-width: 800px) {
+.winner-box {
+position: absolute;
+top: 250px;
+  }
+  .match-container{
+    padding-bottom: 350px;
+  }
+}
+
+@media (max-width: 580px) {
+  .popup {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+  }
+
+  .popup h1 {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 60px;
+  }
+
+  .popup .rules-img {
+    position: relative;
+    margin: auto;
+    margin-top: 70px;
+    margin-bottom: 100px;
+  }
+
+  .popup .show-desktop {
+    display: none;
+  }
+
+  .popup .show-mobile {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .match-container .circle {
+    width: 100px;
+    height: 100px;
+  }
+
+  .match-container .border {
+    width: 130px;
+    height: 130px;
+  }
+
+  .choosing-title{
+    font-size: 18px;
+    width: 170px;
+  }
+
+  .match-container .hand-box {
+    top: 80px;
+  }
+
+}
