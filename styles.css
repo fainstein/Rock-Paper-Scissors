@@ -7,7 +7,6 @@ body {
   padding-top: 70px;
   height: 100vh;
   width: 100vw;
-  overflow: hidden;
 }
 
 .top-section {
@@ -70,7 +69,7 @@ body {
   width: 130px;
   height: 130px;
   border-radius: 100%;
-  position: fixed;
+  position: absolute;
 }
 
 /* GAME BOXES STYLE */
@@ -269,7 +268,6 @@ color: hsl(349, 71%, 52%);
   letter-spacing: 3px;
 }
 
-
 /* FOOTER */
 .attribution {
   font-size: 11px;
@@ -352,8 +350,8 @@ top: 250px;
   .popup .rules-img {
     position: relative;
     margin: auto;
-    margin-top: 70px;
-    margin-bottom: 100px;
+    margin-top: 30px;
+    margin-bottom: 50px;
   }
 
   .popup .show-desktop {
